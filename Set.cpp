@@ -25,6 +25,8 @@ struct Node {
 template <typename ValueType>
 class RBTree {
 private:
+    Node<ValueType>* root{};
+    size_t tree_size = 0;
     struct Iterator {
         Iterator() {
             m_ptr_ = nullptr;
@@ -934,7 +936,4 @@ public:
         ans.konec = true;
         return ans;
     }
-
-    Node<ValueType>* root{};
-    size_t tree_size = 0;
 };
